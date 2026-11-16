@@ -1,4 +1,9 @@
-# RecruitIQ
+# RecruitIQ – AI-Powered Recruitment Platform
+
+🚀 **Live Demo:** https://recruitiq-zcwq.onrender.com/
+
+An AI-powered recruitment platform that helps candidates and HR teams streamline resume analysis, skill matching, ATS scoring, and career recommendations.
+
 
 ## AI Recruitment Intelligence Platform
 
