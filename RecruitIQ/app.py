@@ -335,7 +335,7 @@ The profile demonstrates good technical alignment with the job requirements.
 
     # Rank candidates by ATS score
     results.sort(
-        key=lambda x: x["score"],
+        key=lambda x: x.get("score", 0),
         reverse=True
     )
 
