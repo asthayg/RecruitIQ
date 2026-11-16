@@ -1,0 +1,36 @@
+# Secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python
+**/venv/
+**/.venv/
+**/__pycache__/
+**/*.pyc
+
+**/OUR_RESUME/
+**/requirements_old/
+**/requirements.txtt
+**/requirements.zip
+
+# Editor
+**/.vscode/
+**/.idea/
+
+# Uploaded candidate data
+**/resumes/*
+**/jobs/*
+
+# Private and unnecessary files
+OUR_RESUME/
+requirements.zip
+
+/RecruitIQ/RECRUITIQ_s/
+/RecruitIQ/static/images
+
+RECRUITIQ_s/
+static/images

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RecruitIQ Student Portal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#F8F5FF,#EEE9FF);
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+}
+
+.container{
+
+width:90%;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+nav{
+
+height:90px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#6D28D9;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:40px;
+
+}
+
+nav ul li{
+
+font-weight:500;
+
+color:#555;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+nav ul li:hover{
+
+color:#7C3AED;
+
+}
+
+.hero{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+align-items:center;
+
+gap:80px;
+
+margin-top:60px;
+
+}
+
+.tag{
+
+display:inline-block;
+
+padding:10px 18px;
+
+background:#EEE5FF;
+
+color:#6D28D9;
+
+border-radius:40px;
+
+font-weight:600;
+
+margin-bottom:25px;
+
+}
+
+.left h1{
+
+font-size:62px;
+
+line-height:1.1;
+
+color:#34126F;
+
+margin-bottom:25px;
+
+}
+
+.left p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#666;
+
+margin-bottom:35px;
+
+}
+
+.features{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+}
+
+.feature{
+
+background:white;
+
+padding:22px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(124,58,237,.08);
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.feature:hover{
+
+transform:translateY(-5px);
+
+}
+
+.right{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.upload-card{
+
+width:100%;
+max-width:500px;
+background:white;
+padding:30px;
+border-radius:26px;
+box-shadow:0 20px 40px rgba(124,58,237,.15);
+
+}
+
+.upload-card h2{
+
+color:#6D28D9;
+
+margin-bottom:15px;
+
+}
+
+.upload-card p{
+
+color:#666;
+margin-bottom:22px;
+line-height:1.6;
+font-size:15px;
+
+}
+
+.upload-box{
+
+    border:2px dashed #B794F4;
+    padding:12px 18px;
+    border-radius:16px;
+    margin-bottom:12px;
+    text-align:center;
+    background:#FBF9FF;
+    transition:.3s;
+
+}
+
+.upload-box:hover{
+
+background:#F4EEFF;
+
+border-color:#7C3AED;
+
+}
+
+.upload-box h3{
+
+margin-bottom:4px;
+color:#5B21B6;
+font-size:19px;
+
+}
+
+.upload-box p{
+
+margin-bottom:8px;
+font-size:13px;
+color:#777;
+
+}
+
+.upload-box input{
+
+margin-top:4px;
+font-size:13px;
+
+}
+
+.upload-box{
+
+border:2px dashed #B794F4;
+padding:25px;
+border-radius:18px;
+background:#FBF9FF;
+cursor:pointer;
+transition:.3s;
+text-align:center;
+
+}
+
+.upload-box:hover{
+
+border-color:#7C3AED;
+background:#F4EEFF;
+transform:translateY(-3px);
+
+}
+
+.upload-box label{
+
+display:block;
+cursor:pointer;
+
+}
+
+.upload-box input{
+
+display:none;
+
+}
+
+.upload-icon{
+
+font-size:45px;
+margin-bottom:10px;
+
+}
+
+.file-name{
+
+display:block;
+margin-top:12px;
+font-size:14px;
+color:#7C3AED;
+font-weight:600;
+
+}
+
+
+.analyze{
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+border-radius:18px;
+
+background:linear-gradient(90deg,#7C3AED,#9F67FF);
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.analyze:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 20px 35px rgba(124,58,237,.25);
+
+}
+
+@media(max-width:1000px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+}
+
+.left{
+
+text-align:center;
+
+}
+
+.features{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+.stats{
+
+margin-top:90px;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+.stat{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(124,58,237,.08);
+
+transition:.3s;
+
+}
+
+.stat:hover{
+
+transform:translateY(-6px);
+
+}
+
+.stat h2{
+
+font-size:42px;
+
+color:#6D28D9;
+
+margin-bottom:12px;
+
+}
+
+.stat p{
+
+color:#666;
+
+font-weight:500;
+
+}
+
+@media(max-width:900px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+</style>
+
+<script>
+
+function showResumeName(){
+
+const file=document.getElementById("resume");
+
+document.getElementById("resumeName").innerHTML=file.files[0].name;
+
+}
+
+function showJobName(){
+
+const file=document.getElementById("job");
+
+document.getElementById("jobName").innerHTML=file.files[0].name;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+
+🎓 RecruitIQ
+
+</div>
+
+<ul>
+
+<li>Dashboard</li>
+
+<li>Resume Analysis</li>
+
+<li>Career AI</li>
+
+<li>Projects</li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="left">
+
+<span class="tag">
+
+✨ AI Career Companion
+
+</span>
+
+<h1>
+
+Launch Your Career with AI
+
+</h1>
+
+<p>
+
+RecruitIQ analyzes your resume against any Job Description, calculates ATS scores, identifies skill gaps, generates AI interview questions, recommends portfolio projects, and builds a personalized career roadmap to help you land your dream job.
+
+</p>
+
+<div class="features">
+
+<div class="feature">
+📊 ATS Score Analysis
+</div>
+
+<div class="feature">
+🤖 AI Interview Questions
+</div>
+
+<div class="feature">
+🛠 Skill Gap Detection
+</div>
+
+<div class="feature">
+🚀 AI Project Recommendations
+</div>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<div class="upload-card">
+
+<h2>📄 Upload Documents</h2>
+
+<p>
+
+Upload your Resume and Job Description to receive AI-powered ATS analysis,
+skill-gap detection, interview questions, project recommendations, and a
+personalized career roadmap.
+
+</p>
+
+<form
+action="/analyze_student"
+method="POST"
+enctype="multipart/form-data">
+
+<div class="upload-box">
+
+<label for="resume">
+
+<div class="upload-icon">📄</div>
+
+<h3>Upload Resume</h3>
+
+<p>Drag & Drop or Click to Browse</p>
+
+<span class="file-name" id="resumeName">
+PDF / DOCX
+</span>
+
+</label>
+
+<input
+type="file"
+id="resume"
+name="resume"
+required
+onchange="showResumeName()">
+
+</div>
+
+<div class="upload-box">
+
+<label for="job">
+
+<div class="upload-icon">💼</div>
+
+<h3>Upload Job Description</h3>
+
+<p>Drag & Drop or Click to Browse</p>
+
+<span class="file-name" id="jobName">
+PDF / DOCX / TXT
+</span>
+
+</label>
+
+<input
+type="file"
+id="job"
+name="job"
+required
+onchange="showJobName()">
+
+</div>
+
+<button
+class="analyze"
+type="submit">
+
+✨ Analyze Candidate
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+
+<h2>95%</h2>
+
+<p>ATS Accuracy</p>
+
+</div>
+
+<div class="stat">
+
+<h2>10K+</h2>
+
+<p>Resumes Analyzed</p>
+
+</div>
+
+<div class="stat">
+
+<h2>24/7</h2>
+
+<p>AI Career Assistant</p>
+
+</div>
+
+<div class="stat">
+
+<h2>100+</h2>
+
+<p>Career Roadmaps</p>
+
+</div>
+
+</section>
+
+</div>
+
+</body>
+
+</html>
+

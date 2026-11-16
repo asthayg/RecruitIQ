@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>RecruitIQ | AI Recruitment Intelligence Platform</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(
+135deg,
+#fdf4ff,
+#f5f3ff,
+#ede9fe
+);
+
+min-height:100vh;
+
+}
+
+header{
+
+padding:25px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#6d28d9;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+margin-left:35px;
+
+color:#5b21b6;
+
+font-weight:600;
+
+}
+
+.hero{
+
+padding:80px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+}
+
+.left{
+
+flex:1;
+
+min-width:350px;
+
+}
+
+.left h1{
+
+font-size:60px;
+
+line-height:1.2;
+
+color:#4c1d95;
+
+}
+
+.left p{
+
+margin-top:25px;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#6b7280;
+
+}
+
+.right{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.dashboard{
+
+width:380px;
+
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:0 20px 45px rgba(139,92,246,.18);
+
+}
+
+.dashboard-header{
+
+font-size:24px;
+
+font-weight:700;
+
+color:#6D28D9;
+
+margin-bottom:25px;
+
+text-align:center;
+
+}
+
+.dashboard-card{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 18px;
+
+margin-bottom:15px;
+
+border-radius:15px;
+
+background:#FAF5FF;
+
+border-left:5px solid #8B5CF6;
+
+}
+
+.dashboard-card span{
+
+color:#4B5563;
+
+font-size:15px;
+
+font-weight:500;
+
+}
+
+.dashboard-card strong{
+
+color:#6D28D9;
+
+font-size:16px;
+
+}
+
+.portal{
+
+padding:20px 8% 80px;
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+flex-wrap:wrap;
+
+}
+
+.card{
+
+width:420px;
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:0 15px 40px rgba(139,92,246,.12);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card h2{
+
+color:#6d28d9;
+
+margin-bottom:20px;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+color:#6b7280;
+
+margin-bottom:25px;
+
+}
+
+.card ul{
+
+margin-left:20px;
+
+line-height:2;
+
+color:#374151;
+
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:14px 30px;
+
+border-radius:50px;
+
+background:#8b5cf6;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+.btn:hover{
+
+background:#7c3aed;
+
+}
+
+footer{
+
+margin-top:60px;
+
+padding:30px;
+
+text-align:center;
+
+color:#6b7280;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+RecruitIQ
+
+</div>
+
+<nav>
+
+<a href="/">Home</a>
+
+<a href="#">About</a>
+
+<a href="#">Features</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="left">
+
+<h1>
+
+Smarter Hiring.<br>
+
+Better Careers.<br>
+
+Powered by AI.
+
+</h1>
+
+<p>
+
+RecruitIQ is an AI-powered Recruitment Intelligence Platform designed for students and HR professionals. Analyze resumes, calculate ATS compatibility, identify skill gaps, generate interview questions, and recommend portfolio projects using Artificial Intelligence.
+
+</p>
+
+</div>
+
+<div class="right">
+
+<div class="dashboard">
+
+<div class="dashboard-header">
+
+RecruitIQ AI
+
+</div>
+
+<div class="dashboard-card">
+
+<span>📄 Resume Match</span>
+
+<strong>91%</strong>
+
+</div>
+
+<div class="dashboard-card">
+
+<span>🎯 ATS Score</span>
+
+<strong>89%</strong>
+
+</div>
+
+<div class="dashboard-card">
+
+<span>💼 Skill Match</span>
+
+<strong>Python • SQL • ML</strong>
+
+</div>
+
+<div class="dashboard-card">
+
+<span>🤖 AI Verdict</span>
+
+<strong>Strong Hire</strong>
+
+</div>
+
+<div class="dashboard-card">
+
+<span>📊 Candidate Rank</span>
+
+<strong>#1 of 10</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="portal">
+
+<div class="card">
+
+<h2>
+
+🎓 Student Portal
+
+</h2>
+
+<p>
+
+Upload your Resume and Job Description to receive an ATS Score, AI Interview Questions, Candidate Summary, Skill Gap Analysis and Personalized Project Recommendations.
+
+</p>
+
+<ul>
+
+<li>ATS Score</li>
+
+<li>Interview Questions</li>
+
+<li>Project Suggestions</li>
+
+<li>Skill Gap Analysis</li>
+
+<li>Career Guidance</li>
+
+</ul>
+
+<a href="/student" class="btn">
+
+Continue as Student
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+👨‍💼 HR Portal
+
+</h2>
+
+<p>
+
+Recruiters can upload multiple resumes along with a Job Description to compare candidates, rank them using ATS compatibility and shortlist the best talent.
+
+</p>
+
+<ul>
+
+<li>Multiple Resume Analysis</li>
+
+<li>Candidate Ranking</li>
+
+<li>AI Shortlisting</li>
+
+<li>ATS Matching</li>
+
+<li>Hiring Dashboard</li>
+
+</ul>
+
+<a href="/hr" class="btn">
+
+Continue as HR
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 RecruitIQ
+
+<br><br>
+
+AI Recruitment Intelligence Platform
+
+<br><br>
+
+Designed & Developed by Astha Singh 💜
+
+</footer>
+
+</body>
+
+</html>

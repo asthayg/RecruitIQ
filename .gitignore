@@ -1,0 +1,23 @@
+﻿# Secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python
+**/venv/
+**/.venv/
+**/__pycache__/
+**/*.pyc
+
+# Editor
+**/.vscode/
+**/.idea/
+
+# Uploaded candidate data
+**/resumes/*
+**/jobs/*
+
+# Private files
+/OUR_RESUME/
+/requirements.zip
+/requirements.txtt

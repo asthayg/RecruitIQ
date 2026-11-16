@@ -1,0 +1,7 @@
+Python
+SQL
+Pandas
+Machine Learning
+Git
+Docker
+Flask

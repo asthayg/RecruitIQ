@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RecruitIQ | HR Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #fdf4ff,
+        #ede9fe,
+        #f5f3ff
+    );
+
+    padding:40px;
+
+}
+
+.card{
+
+    width:700px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 35px rgba(139,92,246,.15);
+
+}
+
+h1{
+
+    text-align:center;
+
+    color:#6D28D9;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.info{
+
+    background:#F5F3FF;
+
+    border-left:6px solid #8B5CF6;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    margin-bottom:30px;
+
+    line-height:2;
+
+    color:#5B21B6;
+
+    font-weight:500;
+
+}
+
+.upload-box{
+
+    background:#FAF5FF;
+
+    border:2px dashed #C4B5FD;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+}
+
+.upload-box h3{
+
+    color:#6D28D9;
+
+    margin-bottom:15px;
+
+}
+
+/* ---------- Drag & Drop Upload ---------- */
+
+.drop-zone{
+
+    margin-top:15px;
+
+    min-height:140px;
+
+    border:2px dashed #C4B5FD;
+
+    border-radius:16px;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    padding:20px;
+
+}
+
+.drop-zone:hover{
+
+    background:#F8F5FF;
+
+    border-color:#7C3AED;
+
+}
+
+.drop-zone.dragover{
+
+    border-color:#22C55E;
+
+    background:#ECFDF5;
+
+}
+
+.drop-zone p{
+
+    color:#6D28D9;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    line-height:1.8;
+
+}
+
+.drop-zone small{
+
+    color:#777;
+
+    display:block;
+
+    margin-top:8px;
+
+}
+
+.drop-zone input{
+
+    display:none;
+
+}
+
+input[type=file]{
+
+    width:100%;
+
+    padding:10px;
+
+    background:white;
+
+    border-radius:10px;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#8B5CF6;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#7C3AED;
+
+    transform:translateY(-2px);
+
+}
+
+.footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#6B7280;
+
+    font-size:14px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>
+
+👨‍💼 RecruitIQ HR Dashboard
+
+</h1>
+
+<p class="subtitle">
+
+Upload a Job Description and multiple candidate resumes to automatically rank applicants, calculate ATS scores, identify skill gaps, and shortlist the most suitable candidates using Artificial Intelligence.
+
+</p>
+
+<div class="info">
+
+<b>✨ RecruitIQ will automatically:</b>
+
+<br><br>
+
+✔ Calculate ATS Compatibility Score
+
+<br>
+
+✔ Match Candidate Skills
+
+<br>
+
+✔ Detect Missing Skills
+
+<br>
+
+✔ Rank Candidates
+
+<br>
+
+✔ Recommend Hiring Decision
+
+<br>
+
+✔ Generate AI Hiring Insights
+
+</div>
+
+<form
+action="/analyze_hr"
+method="POST"
+enctype="multipart/form-data">
+
+<div class="upload-box">
+
+<h3>
+
+📄 Upload Job Description
+
+</h3>
+
+<div class="drop-zone">
+
+<p>
+
+📄 Drag & Drop Job Description
+
+<small>
+
+Click to Browse
+
+</small>
+
+</p>
+
+<input
+type="file"
+name="job"
+accept=".txt,.pdf,.doc,.docx"
+required>
+
+</div>
+
+</div>
+
+<div class="upload-box">
+
+<h3>
+
+📂 Upload Candidate Resumes (Maximum 10)
+
+</h3>
+
+<div class="drop-zone">
+
+<p>
+
+📂 Drag & Drop Candidate Resumes
+
+<small>
+
+Maximum 10 Files
+
+</small>
+
+</p>
+
+<input
+type="file"
+name="resume"
+multiple
+accept=".pdf,.doc,.docx"
+required>
+
+</div>
+
+<button type="submit">
+
+🚀 Analyze Candidates
+
+</button>
+
+</form>
+
+<div class="footer">
+
+RecruitIQ • AI Recruitment Intelligence Platform
+
+<br>
+
+Designed & Developed by Astha Singh 💜
+
+</div>
+
+</div>
+
+<script>
+
+document.querySelectorAll(".drop-zone").forEach(zone=>{
+
+    const input=zone.querySelector("input");
+
+    const text=zone.querySelector("p");
+
+    zone.onclick=()=>input.click();
+
+    input.onchange=()=>{
+
+        if(input.files.length==1){
+
+            text.innerHTML="✅ "+input.files[0].name;
+
+        }
+
+        else if(input.files.length>1){
+
+            text.innerHTML="✅ "+input.files.length+" files selected";
+
+        }
+
+    };
+
+    zone.ondragover=(e)=>{
+
+        e.preventDefault();
+
+        zone.classList.add("dragover");
+
+    };
+
+    zone.ondragleave=()=>{
+
+        zone.classList.remove("dragover");
+
+    };
+
+    zone.ondrop=(e)=>{
+
+        e.preventDefault();
+
+        zone.classList.remove("dragover");
+
+        input.files=e.dataTransfer.files;
+
+        if(input.files.length==1){
+
+            text.innerHTML="✅ "+input.files[0].name;
+
+        }
+
+        else{
+
+            text.innerHTML="✅ "+input.files.length+" files selected";
+
+        }
+
+    };
+
+});
+
+</script>
+
+</body>
+
+</html>
